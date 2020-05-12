@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "sso://user/bencoe/nodejs-os-config",
-        "sha": "ef8706b4bddfa67052e1847474a5989b46b3b174"
+        "sha": "e819d0b69ae3314cb4ccd9272c89212c4309a325"
       }
     },
     {
