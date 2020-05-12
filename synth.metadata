@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "sso://user/bencoe/nodejs-os-config",
-        "sha": "c8d46e3580e25e5758397f9af3dd7da12ab03774"
+        "sha": "ef8706b4bddfa67052e1847474a5989b46b3b174"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "4186d3e5424edc088a0f4dbce78f02dd860f3de8",
-        "internalRef": "310626531"
+        "sha": "aed11c01e52921613b9ee469c2d85f5f33175fb7",
+        "internalRef": "310660461"
       }
     }
   ],
