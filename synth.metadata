@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-os-config.git",
-        "sha": "ff5fe1c8a8fdc7ffd358baf76358249dfcaf3ccb"
+        "sha": "9c271700668a7835dc6644a49ec23c24a1a18fbe"
       }
     },
     {
@@ -87,7 +87,6 @@
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
-    "package-lock.json.3313539706",
     "protos/google/cloud/osconfig/v1/osconfig_service.proto",
     "protos/google/cloud/osconfig/v1/patch_deployments.proto",
     "protos/google/cloud/osconfig/v1/patch_jobs.proto",
@@ -96,7 +95,6 @@
     "protos/protos.json",
     "renovate.json",
     "samples/README.md",
-    "samples/package-lock.json.3934198833",
     "src/index.ts",
     "src/v1/index.ts",
     "src/v1/os_config_service_client.ts",
