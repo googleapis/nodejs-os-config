@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "b759c563bacf9cd15749be4d2bdd276d3f48ee29",
-        "internalRef": "341102751"
+        "sha": "4b0ad15b0ff483486ae90d73092e7be00f8c1848",
+        "internalRef": "341842584"
       }
     },
     {
@@ -87,6 +87,8 @@
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
+    "protos/google/cloud/osconfig/v1/inventory.proto",
+    "protos/google/cloud/osconfig/v1/osconfig_common.proto",
     "protos/google/cloud/osconfig/v1/osconfig_service.proto",
     "protos/google/cloud/osconfig/v1/patch_deployments.proto",
     "protos/google/cloud/osconfig/v1/patch_jobs.proto",
