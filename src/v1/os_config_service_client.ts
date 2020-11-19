@@ -30,6 +30,11 @@ import * as path from 'path';
 import {Transform} from 'stream';
 import {RequestType} from 'google-gax/build/src/apitypes';
 import * as protos from '../../protos/protos';
+/**
+ * Client JSON configuration object, loaded from
+ * `src/v1/os_config_service_client_config.json`.
+ * This file defines retry strategy and timeouts for all API methods in this library.
+ */
 import * as gapicConfig from './os_config_service_client_config.json';
 
 const version = require('../../../package.json').version;
@@ -86,9 +91,9 @@ export class OsConfigServiceClient {
    *     your project ID will be detected automatically.
    * @param {string} [options.apiEndpoint] - The domain name of the
    *     API remote host.
-   * @param {gax.ClientConfig} [options.clientConfig] - client configuration override.
-   *     Follows the structure of `os_config_service_client_config.json`.
-   * @param {boolean} fallback - Use HTTP fallback mode.
+   * @param {gax.ClientConfig} [options.clientConfig] - Client configuration override.
+   *     Follows the structure of {@link gapicConfig}.
+   * @param {boolean} [options.fallback] - Use HTTP fallback mode.
    *     In fallback mode, a special browser-compatible transport implementation is used
    *     instead of gRPC transport. In browser context (if the `window` object is defined)
    *     the fallback mode is enabled automatically; set `options.fallback` to `false`
@@ -101,6 +106,7 @@ export class OsConfigServiceClient {
       opts?.servicePath || opts?.apiEndpoint || staticMembers.servicePath;
     const port = opts?.port || staticMembers.port;
     const clientConfig = opts?.clientConfig ?? {};
+    // eslint-disable-next-line no-undef
     const fallback =
       opts?.fallback ??
       (typeof window !== 'undefined' && typeof window.fetch !== 'undefined');
@@ -330,7 +336,7 @@ export class OsConfigServiceClient {
   // -------------------
   executePatchJob(
     request: protos.google.cloud.osconfig.v1.IExecutePatchJobRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchJob,
@@ -340,7 +346,7 @@ export class OsConfigServiceClient {
   >;
   executePatchJob(
     request: protos.google.cloud.osconfig.v1.IExecutePatchJobRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: Callback<
       protos.google.cloud.osconfig.v1.IPatchJob,
       | protos.google.cloud.osconfig.v1.IExecutePatchJobRequest
@@ -398,7 +404,7 @@ export class OsConfigServiceClient {
   executePatchJob(
     request: protos.google.cloud.osconfig.v1.IExecutePatchJobRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | Callback<
           protos.google.cloud.osconfig.v1.IPatchJob,
           | protos.google.cloud.osconfig.v1.IExecutePatchJobRequest
@@ -421,12 +427,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -441,7 +447,7 @@ export class OsConfigServiceClient {
   }
   getPatchJob(
     request: protos.google.cloud.osconfig.v1.IGetPatchJobRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchJob,
@@ -451,7 +457,7 @@ export class OsConfigServiceClient {
   >;
   getPatchJob(
     request: protos.google.cloud.osconfig.v1.IGetPatchJobRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: Callback<
       protos.google.cloud.osconfig.v1.IPatchJob,
       protos.google.cloud.osconfig.v1.IGetPatchJobRequest | null | undefined,
@@ -487,7 +493,7 @@ export class OsConfigServiceClient {
   getPatchJob(
     request: protos.google.cloud.osconfig.v1.IGetPatchJobRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | Callback<
           protos.google.cloud.osconfig.v1.IPatchJob,
           | protos.google.cloud.osconfig.v1.IGetPatchJobRequest
@@ -508,12 +514,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -528,7 +534,7 @@ export class OsConfigServiceClient {
   }
   cancelPatchJob(
     request: protos.google.cloud.osconfig.v1.ICancelPatchJobRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchJob,
@@ -538,7 +544,7 @@ export class OsConfigServiceClient {
   >;
   cancelPatchJob(
     request: protos.google.cloud.osconfig.v1.ICancelPatchJobRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: Callback<
       protos.google.cloud.osconfig.v1.IPatchJob,
       protos.google.cloud.osconfig.v1.ICancelPatchJobRequest | null | undefined,
@@ -574,7 +580,7 @@ export class OsConfigServiceClient {
   cancelPatchJob(
     request: protos.google.cloud.osconfig.v1.ICancelPatchJobRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | Callback<
           protos.google.cloud.osconfig.v1.IPatchJob,
           | protos.google.cloud.osconfig.v1.ICancelPatchJobRequest
@@ -595,12 +601,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -615,7 +621,7 @@ export class OsConfigServiceClient {
   }
   createPatchDeployment(
     request: protos.google.cloud.osconfig.v1.ICreatePatchDeploymentRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchDeployment,
@@ -625,7 +631,7 @@ export class OsConfigServiceClient {
   >;
   createPatchDeployment(
     request: protos.google.cloud.osconfig.v1.ICreatePatchDeploymentRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: Callback<
       protos.google.cloud.osconfig.v1.IPatchDeployment,
       | protos.google.cloud.osconfig.v1.ICreatePatchDeploymentRequest
@@ -675,7 +681,7 @@ export class OsConfigServiceClient {
   createPatchDeployment(
     request: protos.google.cloud.osconfig.v1.ICreatePatchDeploymentRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | Callback<
           protos.google.cloud.osconfig.v1.IPatchDeployment,
           | protos.google.cloud.osconfig.v1.ICreatePatchDeploymentRequest
@@ -698,12 +704,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -718,7 +724,7 @@ export class OsConfigServiceClient {
   }
   getPatchDeployment(
     request: protos.google.cloud.osconfig.v1.IGetPatchDeploymentRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchDeployment,
@@ -728,7 +734,7 @@ export class OsConfigServiceClient {
   >;
   getPatchDeployment(
     request: protos.google.cloud.osconfig.v1.IGetPatchDeploymentRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: Callback<
       protos.google.cloud.osconfig.v1.IPatchDeployment,
       | protos.google.cloud.osconfig.v1.IGetPatchDeploymentRequest
@@ -768,7 +774,7 @@ export class OsConfigServiceClient {
   getPatchDeployment(
     request: protos.google.cloud.osconfig.v1.IGetPatchDeploymentRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | Callback<
           protos.google.cloud.osconfig.v1.IPatchDeployment,
           | protos.google.cloud.osconfig.v1.IGetPatchDeploymentRequest
@@ -791,12 +797,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -811,7 +817,7 @@ export class OsConfigServiceClient {
   }
   deletePatchDeployment(
     request: protos.google.cloud.osconfig.v1.IDeletePatchDeploymentRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.protobuf.IEmpty,
@@ -821,7 +827,7 @@ export class OsConfigServiceClient {
   >;
   deletePatchDeployment(
     request: protos.google.cloud.osconfig.v1.IDeletePatchDeploymentRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: Callback<
       protos.google.protobuf.IEmpty,
       | protos.google.cloud.osconfig.v1.IDeletePatchDeploymentRequest
@@ -861,7 +867,7 @@ export class OsConfigServiceClient {
   deletePatchDeployment(
     request: protos.google.cloud.osconfig.v1.IDeletePatchDeploymentRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | Callback<
           protos.google.protobuf.IEmpty,
           | protos.google.cloud.osconfig.v1.IDeletePatchDeploymentRequest
@@ -884,12 +890,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -905,7 +911,7 @@ export class OsConfigServiceClient {
 
   listPatchJobs(
     request: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchJob[],
@@ -915,7 +921,7 @@ export class OsConfigServiceClient {
   >;
   listPatchJobs(
     request: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: PaginationCallback<
       protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
       protos.google.cloud.osconfig.v1.IListPatchJobsResponse | null | undefined,
@@ -962,7 +968,7 @@ export class OsConfigServiceClient {
   listPatchJobs(
     request: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | PaginationCallback<
           protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
           | protos.google.cloud.osconfig.v1.IListPatchJobsResponse
@@ -983,12 +989,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -1031,7 +1037,7 @@ export class OsConfigServiceClient {
    */
   listPatchJobsStream(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Transform {
     request = request || {};
     options = options || {};
@@ -1086,7 +1092,7 @@ export class OsConfigServiceClient {
    */
   listPatchJobsAsync(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): AsyncIterable<protos.google.cloud.osconfig.v1.IPatchJob> {
     request = request || {};
     options = options || {};
@@ -1108,7 +1114,7 @@ export class OsConfigServiceClient {
   }
   listPatchJobInstanceDetails(
     request: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchJobInstanceDetails[],
@@ -1118,7 +1124,7 @@ export class OsConfigServiceClient {
   >;
   listPatchJobInstanceDetails(
     request: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: PaginationCallback<
       protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
       | protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsResponse
@@ -1170,7 +1176,7 @@ export class OsConfigServiceClient {
   listPatchJobInstanceDetails(
     request: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | PaginationCallback<
           protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
           | protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsResponse
@@ -1193,12 +1199,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -1246,7 +1252,7 @@ export class OsConfigServiceClient {
    */
   listPatchJobInstanceDetailsStream(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Transform {
     request = request || {};
     options = options || {};
@@ -1302,7 +1308,7 @@ export class OsConfigServiceClient {
    */
   listPatchJobInstanceDetailsAsync(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): AsyncIterable<protos.google.cloud.osconfig.v1.IPatchJobInstanceDetails> {
     request = request || {};
     options = options || {};
@@ -1326,7 +1332,7 @@ export class OsConfigServiceClient {
   }
   listPatchDeployments(
     request: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Promise<
     [
       protos.google.cloud.osconfig.v1.IPatchDeployment[],
@@ -1336,7 +1342,7 @@ export class OsConfigServiceClient {
   >;
   listPatchDeployments(
     request: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
-    options: gax.CallOptions,
+    options: CallOptions,
     callback: PaginationCallback<
       protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
       | protos.google.cloud.osconfig.v1.IListPatchDeploymentsResponse
@@ -1385,7 +1391,7 @@ export class OsConfigServiceClient {
   listPatchDeployments(
     request: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
     optionsOrCallback?:
-      | gax.CallOptions
+      | CallOptions
       | PaginationCallback<
           protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
           | protos.google.cloud.osconfig.v1.IListPatchDeploymentsResponse
@@ -1408,12 +1414,12 @@ export class OsConfigServiceClient {
     ]
   > | void {
     request = request || {};
-    let options: gax.CallOptions;
+    let options: CallOptions;
     if (typeof optionsOrCallback === 'function' && callback === undefined) {
       callback = optionsOrCallback;
       options = {};
     } else {
-      options = optionsOrCallback as gax.CallOptions;
+      options = optionsOrCallback as CallOptions;
     }
     options = options || {};
     options.otherArgs = options.otherArgs || {};
@@ -1454,7 +1460,7 @@ export class OsConfigServiceClient {
    */
   listPatchDeploymentsStream(
     request?: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): Transform {
     request = request || {};
     options = options || {};
@@ -1507,7 +1513,7 @@ export class OsConfigServiceClient {
    */
   listPatchDeploymentsAsync(
     request?: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
-    options?: gax.CallOptions
+    options?: CallOptions
   ): AsyncIterable<protos.google.cloud.osconfig.v1.IPatchDeployment> {
     request = request || {};
     options = options || {};
