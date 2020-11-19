@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-os-config.git",
-        "sha": "9c271700668a7835dc6644a49ec23c24a1a18fbe"
+        "sha": "42f4fce8c75fd9511f2fb60d66cb7adac0df06c4"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "4b0ad15b0ff483486ae90d73092e7be00f8c1848",
-        "internalRef": "341842584"
+        "sha": "5587028631d4d743fd906c4eb4e4e4649a7ee5ce",
+        "internalRef": "343187793"
       }
     },
     {
