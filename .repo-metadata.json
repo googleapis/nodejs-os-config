@@ -1,13 +1,14 @@
 {
-  "name": "osconfig",
-  "name_pretty": "OS Config API",
-  "product_documentation": "https://cloud.google.com/compute/docs/os-patch-management",
-  "api_description": "provides OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
   "client_documentation": "https://googleapis.dev/nodejs/osconfig/latest/index.html",
-  "release_level": "ga",
-  "language": "nodejs",
-  "repo": "googleapis/nodejs-os-config",
+  "api_id": "osconfig.googleapis.com",
   "repo_short": "nodejs-os-config",
   "distribution_name": "@google-cloud/os-config",
-  "api_id": "osconfig.googleapis.com"
+  "release_level": "ga",
+  "language": "nodejs",
+  "name_pretty": "OS Config API",
+  "repo": "googleapis/nodejs-os-config",
+  "product_documentation": "https://cloud.google.com/compute/docs/os-patch-management",
+  "default_version": "v1",
+  "name": "osconfig",
+  "api_description": "provides OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances."
 }
