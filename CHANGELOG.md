@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.4.1](https://www.github.com/googleapis/nodejs-os-config/compare/v1.4.0...v1.4.1) (2021-05-12)
+
+
+### Bug Fixes
+
+* **deps:** require google-gax v2.12.0 ([#95](https://www.github.com/googleapis/nodejs-os-config/issues/95)) ([1aae782](https://www.github.com/googleapis/nodejs-os-config/commit/1aae7821fe5d4606da2e04c05e383b43b698067e))
+* use require() to load JSON protos ([#98](https://www.github.com/googleapis/nodejs-os-config/issues/98)) ([d9e466b](https://www.github.com/googleapis/nodejs-os-config/commit/d9e466b9e54bd6ec667a0dfd324a47ec5593d7e1))
+
 ## [1.4.0](https://www.github.com/googleapis/nodejs-os-config/compare/v1.3.1...v1.4.0) (2021-01-09)
 
 
