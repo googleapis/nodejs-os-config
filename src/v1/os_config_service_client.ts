@@ -409,6 +409,10 @@ export class OsConfigServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.executePatchJob(request);
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.execute_patch_job.js</caption>
+   * region_tag:osconfig_execute_patch_job_sample
+   *
    */
   executePatchJob(
     request?: protos.google.cloud.osconfig.v1.IExecutePatchJobRequest,
@@ -497,6 +501,10 @@ export class OsConfigServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.getPatchJob(request);
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.get_patch_job.js</caption>
+   * region_tag:osconfig_get_patch_job_sample
+   *
    */
   getPatchJob(
     request?: protos.google.cloud.osconfig.v1.IGetPatchJobRequest,
@@ -583,6 +591,10 @@ export class OsConfigServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.cancelPatchJob(request);
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.cancel_patch_job.js</caption>
+   * region_tag:osconfig_cancel_patch_job_sample
+   *
    */
   cancelPatchJob(
     request?: protos.google.cloud.osconfig.v1.ICancelPatchJobRequest,
@@ -683,6 +695,10 @@ export class OsConfigServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.createPatchDeployment(request);
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.create_patch_deployment.js</caption>
+   * region_tag:osconfig_create_patch_deployment_sample
+   *
    */
   createPatchDeployment(
     request?: protos.google.cloud.osconfig.v1.ICreatePatchDeploymentRequest,
@@ -775,6 +791,10 @@ export class OsConfigServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.getPatchDeployment(request);
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.get_patch_deployment.js</caption>
+   * region_tag:osconfig_get_patch_deployment_sample
+   *
    */
   getPatchDeployment(
     request?: protos.google.cloud.osconfig.v1.IGetPatchDeploymentRequest,
@@ -867,6 +887,10 @@ export class OsConfigServiceClient {
    *   for more details and examples.
    * @example
    * const [response] = await client.deletePatchDeployment(request);
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.delete_patch_deployment.js</caption>
+   * region_tag:osconfig_delete_patch_deployment_sample
+   *
    */
   deletePatchDeployment(
     request?: protos.google.cloud.osconfig.v1.IDeletePatchDeploymentRequest,
@@ -967,6 +991,10 @@ export class OsConfigServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_jobs.js</caption>
+   * region_tag:osconfig_list_patch_jobs_sample
+   *
    */
   listPatchJobs(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
@@ -1036,6 +1064,10 @@ export class OsConfigServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_jobs.js</caption>
+   * region_tag:osconfig_list_patch_jobs_sample
+   *
    */
   listPatchJobsStream(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
@@ -1049,7 +1081,8 @@ export class OsConfigServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listPatchJobs'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPatchJobs.createStream(
       this.innerApiCalls.listPatchJobs as gax.GaxCall,
@@ -1090,6 +1123,10 @@ export class OsConfigServiceClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_jobs.js</caption>
+   * region_tag:osconfig_list_patch_jobs_sample
+   *
    */
   listPatchJobsAsync(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobsRequest,
@@ -1104,7 +1141,8 @@ export class OsConfigServiceClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listPatchJobs'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPatchJobs.asyncIterate(
       this.innerApiCalls['listPatchJobs'] as GaxCall,
@@ -1172,6 +1210,10 @@ export class OsConfigServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_job_instance_details.js</caption>
+   * region_tag:osconfig_list_patch_job_instance_details_sample
+   *
    */
   listPatchJobInstanceDetails(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
@@ -1248,6 +1290,10 @@ export class OsConfigServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_job_instance_details.js</caption>
+   * region_tag:osconfig_list_patch_job_instance_details_sample
+   *
    */
   listPatchJobInstanceDetailsStream(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
@@ -1261,7 +1307,8 @@ export class OsConfigServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listPatchJobInstanceDetails'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPatchJobInstanceDetails.createStream(
       this.innerApiCalls.listPatchJobInstanceDetails as gax.GaxCall,
@@ -1303,6 +1350,10 @@ export class OsConfigServiceClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_job_instance_details.js</caption>
+   * region_tag:osconfig_list_patch_job_instance_details_sample
+   *
    */
   listPatchJobInstanceDetailsAsync(
     request?: protos.google.cloud.osconfig.v1.IListPatchJobInstanceDetailsRequest,
@@ -1317,7 +1368,8 @@ export class OsConfigServiceClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listPatchJobInstanceDetails'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPatchJobInstanceDetails.asyncIterate(
       this.innerApiCalls['listPatchJobInstanceDetails'] as GaxCall,
@@ -1382,6 +1434,10 @@ export class OsConfigServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_deployments.js</caption>
+   * region_tag:osconfig_list_patch_deployments_sample
+   *
    */
   listPatchDeployments(
     request?: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
@@ -1451,6 +1507,10 @@ export class OsConfigServiceClient {
    *   Please see the
    *   [documentation](https://github.com/googleapis/gax-nodejs/blob/master/client-libraries.md#auto-pagination)
    *   for more details and examples.
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_deployments.js</caption>
+   * region_tag:osconfig_list_patch_deployments_sample
+   *
    */
   listPatchDeploymentsStream(
     request?: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
@@ -1464,7 +1524,8 @@ export class OsConfigServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listPatchDeployments'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPatchDeployments.createStream(
       this.innerApiCalls.listPatchDeployments as gax.GaxCall,
@@ -1503,6 +1564,10 @@ export class OsConfigServiceClient {
    * for await (const response of iterable) {
    *   // process response
    * }
+   *
+   * @example <caption>include:samples/generated/v1/os_config_service.list_patch_deployments.js</caption>
+   * region_tag:osconfig_list_patch_deployments_sample
+   *
    */
   listPatchDeploymentsAsync(
     request?: protos.google.cloud.osconfig.v1.IListPatchDeploymentsRequest,
@@ -1517,7 +1582,8 @@ export class OsConfigServiceClient {
         parent: request.parent || '',
       });
     options = options || {};
-    const callSettings = new gax.CallSettings(options);
+    const defaultCallSettings = this._defaults['listPatchDeployments'];
+    const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPatchDeployments.asyncIterate(
       this.innerApiCalls['listPatchDeployments'] as GaxCall,
