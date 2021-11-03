@@ -170,6 +170,12 @@ export class OsConfigServiceClient {
       inventoryPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/locations/{location}/instances/{instance}/inventory'
       ),
+      oSPolicyAssignmentPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}'
+      ),
+      oSPolicyAssignmentReportPathTemplate: new this._gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report'
+      ),
       patchDeploymentPathTemplate: new this._gaxModule.PathTemplate(
         'projects/{project}/patchDeployments/{patch_deployment}'
       ),
@@ -1585,6 +1591,150 @@ export class OsConfigServiceClient {
   matchInstanceFromInventoryName(inventoryName: string) {
     return this.pathTemplates.inventoryPathTemplate.match(inventoryName)
       .instance;
+  }
+
+  /**
+   * Return a fully-qualified oSPolicyAssignment resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} os_policy_assignment
+   * @returns {string} Resource name string.
+   */
+  oSPolicyAssignmentPath(
+    project: string,
+    location: string,
+    osPolicyAssignment: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentPathTemplate.render({
+      project: project,
+      location: location,
+      os_policy_assignment: osPolicyAssignment,
+    });
+  }
+
+  /**
+   * Parse the project from OSPolicyAssignment resource.
+   *
+   * @param {string} oSPolicyAssignmentName
+   *   A fully-qualified path representing OSPolicyAssignment resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromOSPolicyAssignmentName(oSPolicyAssignmentName: string) {
+    return this.pathTemplates.oSPolicyAssignmentPathTemplate.match(
+      oSPolicyAssignmentName
+    ).project;
+  }
+
+  /**
+   * Parse the location from OSPolicyAssignment resource.
+   *
+   * @param {string} oSPolicyAssignmentName
+   *   A fully-qualified path representing OSPolicyAssignment resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromOSPolicyAssignmentName(oSPolicyAssignmentName: string) {
+    return this.pathTemplates.oSPolicyAssignmentPathTemplate.match(
+      oSPolicyAssignmentName
+    ).location;
+  }
+
+  /**
+   * Parse the os_policy_assignment from OSPolicyAssignment resource.
+   *
+   * @param {string} oSPolicyAssignmentName
+   *   A fully-qualified path representing OSPolicyAssignment resource.
+   * @returns {string} A string representing the os_policy_assignment.
+   */
+  matchOsPolicyAssignmentFromOSPolicyAssignmentName(
+    oSPolicyAssignmentName: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentPathTemplate.match(
+      oSPolicyAssignmentName
+    ).os_policy_assignment;
+  }
+
+  /**
+   * Return a fully-qualified oSPolicyAssignmentReport resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} instance
+   * @param {string} assignment
+   * @returns {string} Resource name string.
+   */
+  oSPolicyAssignmentReportPath(
+    project: string,
+    location: string,
+    instance: string,
+    assignment: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentReportPathTemplate.render({
+      project: project,
+      location: location,
+      instance: instance,
+      assignment: assignment,
+    });
+  }
+
+  /**
+   * Parse the project from OSPolicyAssignmentReport resource.
+   *
+   * @param {string} oSPolicyAssignmentReportName
+   *   A fully-qualified path representing OSPolicyAssignmentReport resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromOSPolicyAssignmentReportName(
+    oSPolicyAssignmentReportName: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentReportPathTemplate.match(
+      oSPolicyAssignmentReportName
+    ).project;
+  }
+
+  /**
+   * Parse the location from OSPolicyAssignmentReport resource.
+   *
+   * @param {string} oSPolicyAssignmentReportName
+   *   A fully-qualified path representing OSPolicyAssignmentReport resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromOSPolicyAssignmentReportName(
+    oSPolicyAssignmentReportName: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentReportPathTemplate.match(
+      oSPolicyAssignmentReportName
+    ).location;
+  }
+
+  /**
+   * Parse the instance from OSPolicyAssignmentReport resource.
+   *
+   * @param {string} oSPolicyAssignmentReportName
+   *   A fully-qualified path representing OSPolicyAssignmentReport resource.
+   * @returns {string} A string representing the instance.
+   */
+  matchInstanceFromOSPolicyAssignmentReportName(
+    oSPolicyAssignmentReportName: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentReportPathTemplate.match(
+      oSPolicyAssignmentReportName
+    ).instance;
+  }
+
+  /**
+   * Parse the assignment from OSPolicyAssignmentReport resource.
+   *
+   * @param {string} oSPolicyAssignmentReportName
+   *   A fully-qualified path representing OSPolicyAssignmentReport resource.
+   * @returns {string} A string representing the assignment.
+   */
+  matchAssignmentFromOSPolicyAssignmentReportName(
+    oSPolicyAssignmentReportName: string
+  ) {
+    return this.pathTemplates.oSPolicyAssignmentReportPathTemplate.match(
+      oSPolicyAssignmentReportName
+    ).assignment;
   }
 
   /**
