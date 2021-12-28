@@ -12,5 +12,5 @@
   "client_documentation": "https://cloud.google.com/nodejs/docs/reference/os-config/latest",
   "api_id": "osconfig.googleapis.com",
   "api_shortname": "osconfig",
-  "library_type": ""
+  "library_type": "GAPIC_AUTO"
 }
