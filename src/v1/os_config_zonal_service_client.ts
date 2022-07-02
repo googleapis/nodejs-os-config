@@ -1463,7 +1463,7 @@ export class OsConfigZonalServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const defaultCallSettings = this._defaults['listOSPolicyAssignments'];
+    const defaultCallSettings = this._defaults['listOsPolicyAssignments'];
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listOSPolicyAssignments.createStream(
@@ -1512,7 +1512,7 @@ export class OsConfigZonalServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const defaultCallSettings = this._defaults['listOSPolicyAssignments'];
+    const defaultCallSettings = this._defaults['listOsPolicyAssignments'];
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listOSPolicyAssignments.asyncIterate(
@@ -1663,7 +1663,7 @@ export class OsConfigZonalServiceClient {
         name: request.name || '',
       });
     const defaultCallSettings =
-      this._defaults['listOSPolicyAssignmentRevisions'];
+      this._defaults['listOsPolicyAssignmentRevisions'];
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listOSPolicyAssignmentRevisions.createStream(
@@ -1713,7 +1713,7 @@ export class OsConfigZonalServiceClient {
         name: request.name || '',
       });
     const defaultCallSettings =
-      this._defaults['listOSPolicyAssignmentRevisions'];
+      this._defaults['listOsPolicyAssignmentRevisions'];
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listOSPolicyAssignmentRevisions.asyncIterate(
@@ -1910,7 +1910,7 @@ export class OsConfigZonalServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const defaultCallSettings = this._defaults['listOSPolicyAssignmentReports'];
+    const defaultCallSettings = this._defaults['listOsPolicyAssignmentReports'];
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listOSPolicyAssignmentReports.createStream(
@@ -1982,7 +1982,7 @@ export class OsConfigZonalServiceClient {
       gax.routingHeader.fromParams({
         parent: request.parent || '',
       });
-    const defaultCallSettings = this._defaults['listOSPolicyAssignmentReports'];
+    const defaultCallSettings = this._defaults['listOsPolicyAssignmentReports'];
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listOSPolicyAssignmentReports.asyncIterate(
